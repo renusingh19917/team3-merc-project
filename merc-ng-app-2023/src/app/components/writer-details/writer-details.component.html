@@ -1,0 +1,6 @@
+<div *ngIf="writerData">
+    <p>Posted by: {{writerData.name}}</p>
+    <!-- <a [href]="mailto('example@mail.com')"> -->
+    <a href="mailto:{{writerData.email}}">{{writerData.email}}</a>
+    <!-- <p><a [routerLink]="['/writer-details']"> {{writerData.email}} </a></p> -->
+</div>

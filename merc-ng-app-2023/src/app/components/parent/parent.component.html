@@ -1,0 +1,4 @@
+<p>parent works!</p>
+<p>Parent data in Parent component = {{parentData}}</p>
+<p>Child data in parent = {{childDataInParent}}</p>
+<app-child [parentDataInChild]="parentData" (passData)="getDataFromChild($event)"></app-child>

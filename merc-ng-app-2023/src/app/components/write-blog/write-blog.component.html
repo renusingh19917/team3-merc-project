@@ -1,0 +1,40 @@
+<!-- Angular Reactive From  -->
+
+<section>
+    <form [formGroup]="blogForm" (ngSubmit)="submitBlog()">
+        <h2>Write Your Blog</h2>
+        <p>Write a blog and express yourself to the world!</p>
+        <input type="text" id="title" formControlName="title" placeholder="Enter title" autofocus required />
+        <br />
+        <br />
+        <textarea formControlName="body" id="body" cols="30" rows="6" placeholder="Enter your blog content here..."></textarea>
+        <br />
+        <br />
+        <input type="text" formControlName="topics" (input)="topicInputChange()" placeholder="Enter blog topics (e.g., art, travel, food)...">
+        <br />
+        <ul *ngIf="selectedTopics.length > 0">
+            <li *ngFor="let sugg of selectedTopics" (click)="selectTopic(sugg)">{{sugg}}</li>
+        </ul>
+        <br />
+        <br />
+        <input type="submit" value="Publish">
+    </form>
+</section>
+
+
+<!-- Angular Template Driven From  -->
+
+<!-- <section>
+    <h2>Write Your Blog</h2>
+    <p>Write a blog and express yourself to the world!</p>
+    <form (ngSubmit)="submitBlog()">
+        <input [(ngModel)]="blogData.title" type="text" id="title" name="title" placeholder="Enter title" required />
+        <br />
+        <br />
+        <textarea [(ngModel)]="blogData.body" name="body" id="body" cols="30" rows="10"></textarea>
+        <br />
+        <br />
+        <input type="submit" value="Publish">
+    </form>
+</section>
+ -->

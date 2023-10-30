@@ -1,0 +1,28 @@
+<section>
+    <form [formGroup]="registerForm" (ngSubmit)="submitRegister()">
+        <h3>Register Yourself</h3>
+        <input type="text" id="username" formControlName="username" placeholder="Enter your username" required
+            autofocus />
+        <br />
+        <input type="email" id="email" formControlName="email" placeholder="Enter your email" required />
+        <br />
+        <input type="password" id="password" formControlName="password" placeholder="Enter password" required />
+        <br />
+        <input type="password" id="confirmpassword" formControlName="confirmpassword" placeholder="Confirm password"
+            required />
+        <br />
+        <br />
+        <h4>Enter your address details below</h4>
+        <input type="number" id="pincode" formControlName="pincode" placeholder="Pincode"
+            (input)="onPincodeChange()"/>
+        <br />
+        <input type="text" id="street" formControlName="street" placeholder="Street" />
+        <br />
+        <input type="text" id="city" formControlName="city" placeholder="City" />
+        <br />
+        <input type="text" id="state" formControlName="state" placeholder="State" />
+        <br />
+        <br />
+        <input type="submit" value="Register">
+    </form>
+</section>

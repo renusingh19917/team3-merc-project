@@ -1,0 +1,21 @@
+<nav>
+    <ul>
+        <li><a [routerLink]="['home']"> <img height="24px"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeD7Ax-9gj1CQjF3pnBJu8SvIxXArFyZFK90n88HU5-biGPjn3SuPMPgSpMKzrL4-8WQQ&usqp=CAU"
+                    alt="merc logo"></a></li>
+        <li><a [routerLink]="['all-blogs']">All Blogs</a></li>
+        <li><a [routerLink]="['blog-details', randomBlogId]">Blog of the Day</a></li>
+        <li *ngIf="isLoggedInNow()"><a [routerLink]="['write-blog']">Write Blog</a></li>
+        <li *ngIf="isLoggedInNow()" style="float:right"> <a (click)="logoutNow()" >Logout</a> </li>
+        <li *ngIf="!isLoggedInNow()" style="float:right"><a [routerLink]="['register']">Register</a></li>
+        <li *ngIf="!isLoggedInNow()" style="float:right"><a [routerLink]="['login']">Login</a></li>
+    </ul>
+</nav>
+<!-- <nav>
+    <a [routerLink]="['/home']">Home</a>
+    <a [routerLink]="['/all-blogs']">All Blogs</a>
+    <a [routerLink]="['/blog-details/10']">Blog of the Day</a>
+    <a [routerLink]="['/write-blog']">Write Blog</a>
+    <a [routerLink]="['/login']">Login</a>
+    <a [routerLink]="['/register']">Register</a>
+</nav> -->

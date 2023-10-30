@@ -1,0 +1,45 @@
+
+<div *ngIf="blogData" class="container">
+    <div>
+        <section>
+            <h2>{{ blogData.title }}</h2>
+            <img src="https://picsum.photos/900/400" alt="{{ blogData.title }}" />
+        </section>
+        <div class="blog-content">
+            <!-- <p *ngFor="let elem of blogData.body.split(' ')">{{ elem }} </p> -->
+            <p>
+                <span *ngFor="let elem of (blogData.title.split(' '))">
+                    {{ blogData.body }}
+                </span>
+            </p>
+        </div>
+        <div class="writer-details">
+            <app-writer-details [writerId]="blogData.userId"></app-writer-details>
+        </div>
+        <h2>Comments</h2>
+        <div class="comments-section">
+            <app-comment-list [postId]="blogId"></app-comment-list>
+        </div>
+    </div>
+</div>
+
+<!-- <div *ngIf="blogData">
+    <div>
+        <section>
+            <h2>{{ blogData.title }}</h2>
+            <img width="50%" src="https://picsum.photos/900/400" alt={blogData.title} />
+        </section>
+        <p>
+            <span *ngFor="let elem of (blogData.title.split(' '))">
+                {{ blogData.body }}
+            </span>
+        </p>
+        <h2>Comments</h2>
+        <app-comment-list [postId]="blogId"></app-comment-list>
+        <app-writer-details [writerId]="blogData.userId"></app-writer-details>
+    </div>
+</div> -->
+<div *ngIf="blogNotAvailable">
+    <p>{{blogNotAvailable}}</p>
+    <a [routerLink]="['/all-blogs']">Please see the list of available blogs.</a>
+</div>

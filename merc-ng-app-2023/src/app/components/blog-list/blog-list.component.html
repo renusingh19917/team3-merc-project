@@ -1,0 +1,18 @@
+
+<!-- <div *ngIf="allBlogs">
+    <div *ngFor="let blog of allBlogs">
+        <h4>{{blog.title}}</h4>
+        <p>{{blog.body}}</p><a [routerLink]="['/blog-details', blog.id]"><p>Read More</p></a>
+        <hr>
+    </div>
+</div> -->
+<!-- <a [routerLink]="['/blog-details', blog.id]">{{blog.title}}</a> -->
+
+<div *ngIf="allBlogs">
+    <div *ngFor="let blog of allBlogs" class="blog-container">
+        <h4 class="blog-title">{{blog.title}}</h4>
+        <p class="blog-body">{{blog.body}}</p>
+        <a [routerLink]="['/blog-details', blog.id]" class="read-more-link">Read More</a>
+        <!-- <hr> -->
+    </div>
+</div>

@@ -1,0 +1,10 @@
+
+<div *ngIf="blogComment">
+    <div *ngFor="let comment of blogComment">
+        <h4>{{comment.name}}</h4>
+        <p>{{comment.body}}</p>
+        <!-- <p>{{comment.email}}</p> -->
+        <a href="mailto:{{comment.email}}">{{comment.email}}</a>
+        <hr>
+    </div>
+</div>

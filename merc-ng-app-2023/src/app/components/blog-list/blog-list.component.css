@@ -1,0 +1,44 @@
+/* p {
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } */
+
+/* Add styles for blog container */
+.blog-container {
+  margin: 10px 10px 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Style the blog title */
+.blog-title {
+  font-size: 1.5rem;
+  margin: 5px 0 5px;
+  color: #333;
+}
+
+/* Style the blog body */
+.blog-body {
+  color: #555;
+  white-space: nowrap;
+  width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Style the "Read More" link */
+.read-more-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.read-more-link:hover {
+  text-decoration: underline;
+}
